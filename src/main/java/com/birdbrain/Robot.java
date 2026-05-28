@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 
 /**
@@ -105,7 +106,7 @@ abstract class Robot {
         long requestStartTime = System.currentTimeMillis();
 	    String responseString = "Not Connected";
         try {
-            requestUrl = new URL(URLRequest);
+            requestUrl = URI.create(URLRequest).toURL();
             connection = (HttpURLConnection) requestUrl.openConnection();
             connection.setRequestMethod("GET");
             //connection.setDoOutput(true);
