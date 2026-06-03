@@ -1,3 +1,4 @@
+
 package com.alextim;
 import com.birdbrain.Finch;
 
@@ -10,5 +11,4 @@ public class TesterFinch {
 
         bird.stopAll();
     }
-  
 }
